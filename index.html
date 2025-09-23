@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M|Dev Rocket Launch</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M|Dev Rocket Cinematic</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="launch-zone">
-    <div class="stars"></div>
-    <img src="assets/rocket.svg" alt="rocket" class="rocket" id="rocket">
-    <button id="launchBtn">Launch</button>
-  </section>
+  <canvas id="starfield"></canvas>
+  <img id="rocket" src="assets/rocket.png" alt="rocket">
+  <button id="launchBtn">Ignite</button>
 
-  <section class="arrival">
-    <h1>Welcome to M|Dev</h1>
-    <p>Code • Create • Inspire</p>
-  </section>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
