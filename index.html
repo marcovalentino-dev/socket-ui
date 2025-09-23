@@ -3,15 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M|Dev Treasure Box</title>
+  <title>M|Dev Treasure Chest</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="box">
+  <div class="scene">
     <input type="checkbox" id="toggle">
-    <label class="lid" for="toggle"></label>
-    <div class="base">
-      <span class="message">M|Dev Magic ✨</span>
+    <label for="toggle" class="trigger">Open Chest</label>
+
+    <div class="chest">
+      <!-- base -->
+      <div class="panel front"></div>
+      <div class="panel back"></div>
+      <div class="panel left"></div>
+      <div class="panel right"></div>
+      <div class="panel bottom"></div>
+
+      <!-- lid group -->
+      <div class="lid">
+        <div class="lid-top"></div>
+        <div class="lid-front"></div>
+        <div class="lid-back"></div>
+        <div class="lid-left"></div>
+        <div class="lid-right"></div>
+      </div>
+
+      <!-- glowing treasure -->
+      <div class="treasure">
+        <span>M|Dev Magic ✨</span>
+      </div>
     </div>
   </div>
 </body>
