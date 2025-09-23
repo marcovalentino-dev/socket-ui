@@ -1,60 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M|Dev Treasure Chest</title>
+  <title>Baule del Tesoro 3D</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="chest">
-  <div class="chest__panel chest__panel--back"></div>
-  <div class="chest__panel chest__panel--top"></div>
-  <div class="chest__panel chest__panel--bottom"></div>
-  <div class="chest__panel chest__panel--right"></div>
-  <div class="chest__panel chest__panel--front">
-    <div class="chest__panel chest__panel--front-frame"></div>
-  </div>
-  <div class="chest__panel chest__panel--left"></div>
-  <div class="chest__drawer drawer" data-position="1">
-    <details>
-      <summary></summary>
-    </details>
-    <div class="drawer__structure">
-      <div class="drawer__panel drawer__panel--back"><span>CSS</span>
-      </div>
-      <div class="drawer__panel drawer__panel--bottom"></div>
-      <div class="drawer__panel drawer__panel--right"></div>
-      <div class="drawer__panel drawer__panel--left"></div>
-      <div class="drawer__panel drawer__panel--front"></div>
+  <div class="chest">
+    <!-- Base del baule -->
+    <div class="chest__base chest__panel chest__panel--front"></div>
+    <div class="chest__base chest__panel chest__panel--back"></div>
+    <div class="chest__base chest__panel chest__panel--left"></div>
+    <div class="chest__base chest__panel chest__panel--right"></div>
+    <div class="chest__base chest__panel chest__panel--bottom"></div>
+
+    <!-- Coperchio bombato -->
+    <div class="chest__lid">
+      <div class="lid__panel lid__panel--front"></div>
+      <div class="lid__panel lid__panel--back"></div>
+      <div class="lid__panel lid__panel--left"></div>
+      <div class="lid__panel lid__panel--right"></div>
+      <div class="lid__panel lid__panel--top"></div>
+    </div>
+
+    <!-- Serratura -->
+    <div class="lock">
+      <div class="lock__body"></div>
+      <div class="lock__keyhole"></div>
     </div>
   </div>
-  <div class="chest__drawer drawer" data-position="2">
-    <details>
-      <summary></summary>
-    </details>
-    <div class="drawer__structure">
-      <div class="drawer__panel drawer__panel--back"><span>is</span>
-      </div>
-      <div class="drawer__panel drawer__panel--bottom"></div>
-      <div class="drawer__panel drawer__panel--right"></div>
-      <div class="drawer__panel drawer__panel--left"></div>
-      <div class="drawer__panel drawer__panel--front"></div>
-    </div>
-  </div>
-  <div class="chest__drawer drawer" data-position="3">
-    <details>
-      <summary></summary>
-    </details>
-    <div class="drawer__structure">
-      <div class="drawer__panel drawer__panel--back"><span class="letter">A</span><span class="letter">w</span><span class="letter">e</span><span class="letter">s</span><span class="letter">o</span><span class="letter">m</span><span class="letter">e</span>
-      </div>
-      <div class="drawer__panel drawer__panel--bottom"></div>
-      <div class="drawer__panel drawer__panel--right"></div>
-      <div class="drawer__panel drawer__panel--left"></div>
-      <div class="drawer__panel drawer__panel--front"></div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
