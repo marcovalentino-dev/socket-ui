@@ -6,127 +6,128 @@
 }
 
 :root {
-  --width: 30;       /* larghezza in vmin */
-  --height: 20;      /* altezza base */
-  --depth: 20;       /* profondità */
-  --lid-height: 12;  /* altezza coperchio */
-  --wood1: hsl(30, 50%, 25%);
-  --wood2: hsl(30, 40%, 18%);
-  --metal: #c9a54b;
-  --bg: #cce0f2;
+  --w: 30;      /* larghezza in vmin */
+  --h: 18;      /* altezza base */
+  --d: 18;      /* profondità */
+  --lid-h: 10;  /* altezza coperchio */
+  --wood-light: hsl(28, 40%, 35%);
+  --wood-dark:  hsl(28, 35%, 25%);
+  --metal:      #d0a845;
+  --bg:         #bcd2e5;
 }
 
 body {
   margin: 0;
   height: 100vh;
+  background: var(--bg);
   display: grid;
   place-items: center;
-  background: var(--bg);
 }
 
-.chest {
+.treasure-chest {
   position: relative;
-  width: calc(var(--width) * 1vmin);
-  height: calc((var(--height) + var(--lid-height)) * 1vmin);
+  width: calc(var(--w) * 1vmin);
+  height: calc((var(--h) + var(--lid-h)) * 1vmin);
   transform: rotateX(-25deg) rotateY(35deg);
   transform-style: preserve-3d;
 }
 
-/* Pannelli base */
-.chest__panel {
+/* ---------- PANNELLI BASE ---------- */
+.panel {
   position: absolute;
-  background: var(--wood1);
-  border: 0.5vmin solid var(--wood2);
+  background: var(--wood-light);
+  border: 0.5vmin solid var(--wood-dark);
 }
 
-.chest__panel--front,
-.chest__panel--back {
+.front,
+.back {
   width: 100%;
-  height: calc(var(--height) * 1vmin);
-  left: 0;
+  height: calc(var(--h) * 1vmin);
+  top: var(--lid-h);
 }
 
-.chest__panel--front { transform: translateZ(calc(var(--depth) * 0.5vmin)); }
-.chest__panel--back  { transform: rotateY(180deg) translateZ(calc(var(--depth) * 0.5vmin)); }
+.front { transform: translateZ(calc(var(--d) * 0.5vmin)); }
+.back  { transform: rotateY(180deg) translateZ(calc(var(--d) * 0.5vmin)); }
 
-.chest__panel--left,
-.chest__panel--right {
-  width: calc(var(--depth) * 1vmin);
-  height: calc(var(--height) * 1vmin);
-  top: 0;
+.left,
+.right {
+  width: calc(var(--d) * 1vmin);
+  height: calc(var(--h) * 1vmin);
+  top: var(--lid-h);
 }
 
-.chest__panel--left  { transform: rotateY(-90deg) translateZ(calc(var(--width) * 0.5vmin)); left: 50%; }
-.chest__panel--right { transform: rotateY(90deg) translateZ(calc(var(--width) * 0.5vmin));  right: 50%; }
+.left  { transform: rotateY(-90deg) translateZ(calc(var(--w) * 0.5vmin)); left: 50%; }
+.right { transform: rotateY(90deg)  translateZ(calc(var(--w) * 0.5vmin)); right: 50%; }
 
-.chest__panel--bottom {
+.bottom {
   width: 100%;
-  height: calc(var(--depth) * 1vmin);
+  height: calc(var(--d) * 1vmin);
   bottom: 0;
-  transform: rotateX(90deg) translateZ(calc(var(--height) * 0.5vmin));
+  transform: rotateX(90deg) translateZ(calc(var(--h) * 0.5vmin));
+  background: var(--wood-dark);
 }
 
-/* Coperchio */
-.chest__lid {
+/* ---------- COPERCHIO ---------- */
+.lid {
   position: absolute;
+  top: 0;
   width: 100%;
-  height: calc(var(--lid-height) * 1vmin);
-  top: calc(var(--height) * 1vmin);
+  height: calc(var(--lid-h) * 1vmin);
   transform-origin: center bottom;
-  animation: lid-bob 6s ease-in-out infinite alternate;
 }
 
-@keyframes lid-bob {
-  0%,100% { transform: rotateX(0deg); }
-  50%     { transform: rotateX(-8deg); }
-}
-
-.lid__panel {
-  position: absolute;
-  background: var(--wood1);
-  border: 0.5vmin solid var(--wood2);
-}
-
-.lid__panel--front,
-.lid__panel--back {
+.lid-front,
+.lid-back {
   width: 100%;
-  height: calc(var(--lid-height) * 1vmin);
-}
-
-.lid__panel--front { transform: translateZ(calc(var(--depth) * 0.5vmin)); border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; }
-.lid__panel--back  { transform: rotateY(180deg) translateZ(calc(var(--depth) * 0.5vmin)); border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; }
-
-.lid__panel--left,
-.lid__panel--right {
-  width: calc(var(--depth) * 1vmin);
-  height: calc(var(--lid-height) * 1vmin);
+  height: 100%;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
 }
 
-.lid__panel--left  { transform: rotateY(-90deg) translateZ(calc(var(--width) * 0.5vmin)); left: 50%; }
-.lid__panel--right { transform: rotateY(90deg)  translateZ(calc(var(--width) * 0.5vmin)); right: 50%; }
+.lid-front { transform: translateZ(calc(var(--d) * 0.5vmin)); }
+.lid-back  { transform: rotateY(180deg) translateZ(calc(var(--d) * 0.5vmin)); }
 
-.lid__panel--top {
+.lid-left,
+.lid-right {
+  width: calc(var(--d) * 1vmin);
+  height: 100%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+.lid-left  { transform: rotateY(-90deg) translateZ(calc(var(--w) * 0.5vmin)); left: 50%; }
+.lid-right { transform: rotateY(90deg)  translateZ(calc(var(--w) * 0.5vmin)); right: 50%; }
+
+.lid-top {
   width: 100%;
-  height: calc(var(--depth) * 1vmin);
-  transform: rotateX(90deg) translateZ(calc(var(--lid-height) * 0.5vmin));
+  height: calc(var(--d) * 1vmin);
+  transform: rotateX(90deg) translateZ(calc(var(--lid-h) * 0.5vmin));
   border-radius: 50%;
 }
 
-/* Serratura */
+/* ---------- FASCIA METALLICA ---------- */
+.band {
+  position: absolute;
+  width: 100%;
+  height: 1.2vmin;
+  top: calc(var(--lid-h) - 0.6vmin);
+  background: var(--metal);
+  transform: translateZ(calc(var(--d) * 0.5vmin + 0.1vmin));
+}
+
+/* ---------- SERRATURA ---------- */
 .lock {
   position: absolute;
   width: 4vmin;
   height: 6vmin;
   background: var(--metal);
   left: 50%;
-  bottom: calc(var(--height) * 0.3vmin);
-  transform: translate3d(-50%, 0, calc(var(--depth) * 0.51vmin));
+  top: calc(var(--lid-h) + var(--h) * 0.4vmin);
+  transform: translate3d(-50%, 0, calc(var(--d) * 0.51vmin));
   border-radius: 0.5vmin;
 }
 
-.lock__keyhole {
+.keyhole {
   position: absolute;
   top: 40%;
   left: 50%;
