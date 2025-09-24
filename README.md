@@ -1,12 +1,13 @@
-# M|Dev Rocket Launch Animation
+# M|Dev 3D Glassmorphism Card
 
-Interactive landing page: click **Launch** and watch the rocket take off into a starry sky, revealing the M|Dev welcome section.
+A **3D glassmorphism card component** designed for the **M|Dev** brand.  
+Perfect as a portfolio element, project showcase, or reusable UI component.
 
-### Features
-- Animated starfield background
-- SVG rocket with smooth CSS transition
-- Automatic scroll to arrival section
-- Pure HTML / CSS / JS
+![Preview](screenshot.png) <!-- Add a real screenshot if you have one -->
 
-### Demo
-https://glass-card-eight.vercel.app/
+## ✨ Features
+- **3D hover effect** using CSS `perspective` and `transform-style: preserve-3d`
+- **Glass overlay** with gradients and subtle blur
+- Animated concentric circles highlighting your logo
+- Interactive social buttons
+- Modular CSS variables for quick brand color changes

@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baule del Tesoro 3D</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M|Dev 3D Card</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="treasure-chest">
-    <!-- base del baule -->
-    <div class="panel front"></div>
-    <div class="panel back"></div>
-    <div class="panel left"></div>
-    <div class="panel right"></div>
-    <div class="panel bottom"></div>
 
-    <!-- coperchio bombato -->
-    <div class="lid">
-      <div class="panel lid-front"></div>
-      <div class="panel lid-back"></div>
-      <div class="panel lid-left"></div>
-      <div class="panel lid-right"></div>
-      <div class="panel lid-top"></div>
-    </div>
+  <div class="mdev-card-wrapper">
+    <div class="mdev-card">
 
-    <!-- fascia metallica e serratura -->
-    <div class="band"></div>
-    <div class="lock">
-      <div class="keyhole"></div>
+      <div class="mdev-logo">
+        <span class="circle circle1"></span>
+        <span class="circle circle2"></span>
+        <span class="circle circle3"></span>
+        <span class="circle circle4"></span>
+        <span class="circle circle5">
+
+          <img src="img/mdev-logo.svg" alt="M|Dev logo" class="mdev-logo-img" />
+        </span>
+      </div>
+
+      <div class="mdev-glass"></div>
+
+      <div class="mdev-content">
+        <span class="title">M|Dev UI Card</span>
+        <span class="text">Beautiful 3D card component for your web projects.</span>
+      </div>
+
+      <div class="mdev-bottom">
+        <div class="social-buttons">
+
+          …
+        </div>
+        <div class="view-more">
+          <button class="view-more-btn">Discover More</button>
+          <svg class="svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
