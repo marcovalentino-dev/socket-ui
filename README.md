@@ -3,7 +3,6 @@
 A **3D glassmorphism card component** designed for the **M|Dev** brand.  
 Perfect as a portfolio element, project showcase, or reusable UI component.
 
-![Preview](screenshot.png) <!-- Add a real screenshot if you have one -->
 
 ## ✨ Features
 - **3D hover effect** using CSS `perspective` and `transform-style: preserve-3d`
